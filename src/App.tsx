@@ -1,10 +1,19 @@
 import "./styles.css";
+import React, { FC } from "react";
 
-export default function App() {
+const App: FC = () => {
   return (
     <div className="App">
-      <h1>What should I do?!</h1>
-      <h2>The Time is running...</h2>
+      <div className="header">
+        <div className="inputContainer">
+          <input type="text" placeholder="Task..." />
+          <input type="text" placeholder="Deadline in ... (Days)" />
+        </div>
+        <button>Add Task </button>
+      </div>
+      <div className="todoList"></div>
     </div>
   );
-}
+};
+
+export default App;
